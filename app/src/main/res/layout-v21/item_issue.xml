@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/image_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:src="@drawable/ic_info_outline_24dp"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_issue_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#24292e"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:transitionName="@string/transition_issue_title"
+                tools:text="Why tf.matmul doesn't get zero?" />
+
+            <TextView
+                android:id="@+id/text_extra_details"
+                style="@style/Base.TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="#586069"
+                android:transitionName="@string/transition_issue_extra_details"
+                tools:text="#24639 opened a day ago by ageron" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/text_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_comment_gray_24dp"
+            android:drawableLeft="@drawable/ic_comment_gray_24dp"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:textColor="#586069"
+            android:visibility="gone"
+            tools:text="10"
+            tools:visibility="visible" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

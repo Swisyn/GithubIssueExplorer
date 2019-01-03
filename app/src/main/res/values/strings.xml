@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Github Issue Explorer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="button_retry">Retry</string>
+    <string name="error_no_internet">No internet</string>
+    <string name="error_no_internet_description">Your device is not connected to internet at the moment</string>
+    <string name="error_message_title">Oops!</string>
+    <string name="error_message_unknown">Unknown error occurred</string>
+    <string name="menu_item_search">Search</string>
+    <string name="empty_placeholder_title">No Issues Found</string>
+    <string name="empty_placeholder_description">There are no issues opened for this repository</string>
+    <string name="activity_title_issue_details">Issue Details</string>
+    <string name="transition_issue_title">issue_title</string>
+    <string name="transition_issue_extra_details">issue_extra_details</string>
+
+    <string name="error_comments_not_loaded">Comments of this issue can\'t be reached due to your internet connection</string>
+    <string name="issue_title_placeholder">%1$s opened this issue %2$s · %3$d comments</string>
+    <string name="issue_number_placeholder"> #%1$d</string>
+    <string name="filter_dialog_title">Filter issues by state</string>
+</resources>

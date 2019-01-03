@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="issue_states">
+        <item>Open</item>
+        <item>Closed</item>
+    </string-array>
+</resources>
