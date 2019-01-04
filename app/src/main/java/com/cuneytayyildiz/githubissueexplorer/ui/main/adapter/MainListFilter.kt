@@ -6,7 +6,7 @@ import com.cuneytayyildiz.githubissueexplorer.data.model.Issue
 
 class MainListFilter(
         private var originalList: MutableList<Issue>,
-        private var callback: TrackerFilterCallback
+        private var callback: IssueFilterCallback
 ) : Filter() {
 
     override fun performFiltering(constraint: CharSequence): Filter.FilterResults {
@@ -28,13 +28,13 @@ class MainListFilter(
         }
         val lowercaseConstraint = constraint.toString().toLowerCase()
         return originalList.filter {
-            val nameMatch = it.title!!.toLowerCase().contains(lowercaseConstraint)
-            val symbolMatch = it.body!!.toLowerCase().contains(lowercaseConstraint)
-            return@filter nameMatch || symbolMatch
+            val titleMatch = it.title!!.toLowerCase().contains(lowercaseConstraint)
+            val bodyMatch = it.body!!.toLowerCase().contains(lowercaseConstraint)
+            return@filter titleMatch || bodyMatch
         }
     }
 }
 
-interface TrackerFilterCallback {
+interface IssueFilterCallback {
     fun publishResults(filteredList: MutableList<Issue>)
 }

@@ -50,7 +50,7 @@ class IssueDetailsActivity : AppCompatActivity() {
     @Inject
     lateinit var issueDetailsViewModelFactory: IssueDetailsViewModelFactory
 
-    lateinit var infiniteScrollListener: InfiniteScrollListener
+    private lateinit var infiniteScrollListener: InfiniteScrollListener
     lateinit var issueDetailsViewModel: IssueDetailsViewModel
 
     private var commentsListAdapter: IssueCommentsListAdapter =

@@ -32,9 +32,9 @@ class MainListAdapter(
         )
     }
 
-    private fun makeTrackerFilterCallback(): TrackerFilterCallback {
+    private fun makeTrackerFilterCallback(): IssueFilterCallback {
         return object :
-            TrackerFilterCallback {
+            IssueFilterCallback {
             override fun publishResults(filteredList: MutableList<Issue>) {
                 filterableItems = filteredList
                 notifyDataSetChanged()

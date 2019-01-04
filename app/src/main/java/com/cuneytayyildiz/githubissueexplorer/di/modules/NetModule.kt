@@ -64,13 +64,6 @@ class NetModule {
         client.readTimeout(35, TimeUnit.SECONDS)
         client.writeTimeout(35, TimeUnit.SECONDS)
 
-//        client.authenticator { _, response ->
-//            response.request().newBuilder().header(
-//                "Authorization",
-//                Credentials.basic(BuildConfig.API_CONSUMER_KEY, BuildConfig.API_CONSUMER_SECRET)
-//            ).build()
-//        }
-
         return client.build()
     }
 

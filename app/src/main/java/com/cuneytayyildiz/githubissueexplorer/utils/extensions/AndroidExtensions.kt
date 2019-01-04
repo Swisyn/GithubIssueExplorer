@@ -195,7 +195,6 @@ fun <T> Spinner.afterItemSelected(onItemSelected: (T) -> Unit) {
             Log.e("afterItemSelected", parent?.adapter?.getItem(position).toString())
             onItemSelected.invoke(parent?.adapter?.getItem(position) as T)
         }
-
     }
 }
 

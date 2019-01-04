@@ -7,9 +7,7 @@ import com.cuneytayyildiz.githubissueexplorer.di.modules.AppModule
 import com.cuneytayyildiz.githubissueexplorer.di.modules.NetModule
 import com.cuneytayyildiz.githubissueexplorer.di.modules.RepositoryModule
 import com.cuneytayyildiz.githubissueexplorer.ui.details.IssueDetailsActivity
-import com.cuneytayyildiz.githubissueexplorer.ui.details.vm.IssueDetailsViewModel
 import com.cuneytayyildiz.githubissueexplorer.ui.main.MainActivity
-import com.cuneytayyildiz.githubissueexplorer.ui.main.vm.MainViewModel
 import dagger.Component
 import javax.inject.Singleton
 
@@ -19,11 +17,6 @@ import javax.inject.Singleton
         modules = [AppModule::class, NetModule::class, RepositoryModule::class]
 )
 interface AppComponent {
-
-    fun inject(viewModelModule: MainViewModel)
-
-    fun inject(viewModelModule: IssueDetailsViewModel)
-
     fun inject(mainActivity: MainActivity)
 
     fun inject(detailsActivity: IssueDetailsActivity)
